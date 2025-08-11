@@ -1,0 +1,6 @@
+Questions:
+
+1. Write a program where the task or the job is that aprime number is checked within the range of 1 to 100 where we use the method where the first even no. i.e. 2 is taken while after that prime numbers are to be found within all the odd numbers.
+
+2. Write a program that does DFA minimization
+

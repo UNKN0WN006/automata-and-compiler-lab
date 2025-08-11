@@ -1,0 +1,24 @@
+digraph PrimeAutomata {
+    rankdir=LR;
+    node [shape=circle];
+
+    q0 [label="q0\nInitial"];
+    qr [label="qr\nReject\n(Not Prime)", shape=doublecircle, color=red];
+    qf [label="qf\nAccept\n(Prime)", shape=doublecircle, color=green];
+
+    q3 [label="q3\nCheck 3"];
+    q5 [label="q5\nCheck 5"];
+    q7 [label="q7\nCheck 7"];
+
+    q0 -> qr [label="binary < 2"];
+    q0 -> qf [label="binary == 2"];
+    q0 -> qr [label="even (last bit 0)"];
+    q0 -> q3 [label="odd > 2"];
+
+    q3 -> qr [label="divisible by 3"];
+    q3 -> q5 [label="not divisible by 3"];
+    q5 -> qr [label="divisible by 5"];
+    q5 -> q7 [label="not divisible by 5"];
+    q7 -> qr [label="divisible by 7"];
+    q7 -> qf [label="d > sqrt(n)"];
+}
