@@ -1,0 +1,10 @@
+#######################################
+# Assignment - 2 (04.08.2025)
+#######################################
+
+1. Write a program to design a FA that accepts all strings with 0,1 which are divisible by 6
+
+2. Write a program the converts NFA to DFA for the following automata:
+M(L)= {Strings of 0,1, which has 3rd last digit of 1}
+
+

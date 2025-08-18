@@ -7,11 +7,10 @@ struct DFA {
     vector<bool> isFinal;
 };
 
-// Function to check if two states are distinguishable in the current partition
+
 bool areDistinguishable(int s1, int s2, const vector<int> &group, const DFA &dfa) {
     if (dfa.isFinal[s1] != dfa.isFinal[s2]) return true; // final vs non-final
 
-    // For each symbol, see if transitions lead to different groups
     for (int sym = 0; sym < dfa.symbols; sym++) {
         if (group[dfa.trans[s1][sym]] != group[dfa.trans[s2][sym]])
             return true;
@@ -19,23 +18,20 @@ bool areDistinguishable(int s1, int s2, const vector<int> &group, const DFA &dfa
     return false;
 }
 
-// Check if minimization is required at all
 bool isMinimizationNeeded(const DFA &dfa) {
     vector<int> group(dfa.states);
     for (int i = 0; i < dfa.states; i++) group[i] = dfa.isFinal[i] ? 1 : 0;
 
-    // Quick check: see if there is at least one pair in the same group but distinguishable
     for (int i = 0; i < dfa.states; i++) {
         for (int j = i + 1; j < dfa.states; j++) {
             if (group[i] == group[j] && areDistinguishable(i, j, group, dfa)) {
-                return true; // At least one split needed
+                return true;
             }
         }
     }
     return false;
 }
 
-// Minimize DFA using equivalence theorem
 DFA minimizeDFA(const DFA &dfa) {
     vector<int> group(dfa.states);
     for (int i = 0; i < dfa.states; i++) group[i] = dfa.isFinal[i] ? 1 : 0;
@@ -43,7 +39,7 @@ DFA minimizeDFA(const DFA &dfa) {
     bool changed;
     do {
         changed = false;
-        map<vector<int>, int> newGroups; // Map transitions pattern to new group
+        map<vector<int>, int> newGroups; 
         vector<int> nextGroup(dfa.states);
 
         for (int i = 0; i < dfa.states; i++) {
@@ -64,7 +60,6 @@ DFA minimizeDFA(const DFA &dfa) {
         }
     } while (changed);
 
-    // Build minimized DFA
     int newStates = *max_element(group.begin(), group.end()) + 1;
     DFA minDFA;
     minDFA.states = newStates;

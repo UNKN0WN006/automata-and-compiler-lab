@@ -1,0 +1,8 @@
+Solve the following question, i.e. find the vaues:
+A={Even binary numbers less than 10}
+B={Odd Binary numbers less than 10}
+
+Find the following in automata, i.e. the machine for the automata:
+a. M(AUB)
+b. M(A•B)
+c. M(A*)
