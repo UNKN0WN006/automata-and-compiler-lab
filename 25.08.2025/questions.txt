@@ -1,3 +1,6 @@
 Assignment 5:
 
-Write a program to implement pumping lemma to check if a language is regular or not.
+1. Write a program to implement pumping lemma to check if a language is regular or not.
+	a> L={0^n1^n | n>1}
+	b> L={ww^R | w and w^R means any string and its reverse respectively}
+
