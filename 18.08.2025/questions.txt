@@ -1,4 +1,4 @@
-Solve the following question, i.e. find the vaues:
+Solve the following question, i.e. find the values:
 A={Even binary numbers less than 10}
 B={Odd Binary numbers less than 10}
 
