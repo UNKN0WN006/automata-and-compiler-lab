@@ -1,0 +1,19 @@
+digraph {
+	n0 [label=S]
+	n1 [label=aSb]
+	n0 -> n1
+	n2 [label=aSb]
+	n1 -> n2
+	n3 [label=aSb]
+	n2 -> n3
+	n4 [label=aSb]
+	n3 -> n4
+	n5 [label=aSb]
+	n4 -> n5
+	n6 [label=aSb]
+	n5 -> n6
+	n7 [label=aSb]
+	n6 -> n7
+	n8 [label="ε"]
+	n6 -> n8
+}

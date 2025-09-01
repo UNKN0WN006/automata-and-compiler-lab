@@ -1,0 +1,7 @@
+Questions:
+Check if the given CFL or the inputted CFL is accepted or not by the CFG
+
+i. a^n + b^n | n>=0
+ii. a^2n + b^n | n>=0
+iii. a^2n+3b^n | n>=0
+iv. n(wa)=n(wb)

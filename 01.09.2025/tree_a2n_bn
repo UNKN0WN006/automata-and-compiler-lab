@@ -1,0 +1,11 @@
+digraph {
+	n0 [label=S]
+	n1 [label=aaSb]
+	n0 -> n1
+	n2 [label=aaSb]
+	n1 -> n2
+	n3 [label=aaSb]
+	n2 -> n3
+	n4 [label="ε"]
+	n2 -> n4
+}

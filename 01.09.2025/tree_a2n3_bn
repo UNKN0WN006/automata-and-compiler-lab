@@ -1,0 +1,15 @@
+digraph {
+	n0 [label=S]
+	n1 [label=aaSb]
+	n0 -> n1
+	n2 [label=aaSb]
+	n1 -> n2
+	n3 [label=aaSb]
+	n2 -> n3
+	n4 [label=aaSb]
+	n3 -> n4
+	n5 [label=aaa]
+	n3 -> n5
+	n6 [label=aaa]
+	n2 -> n6
+}
