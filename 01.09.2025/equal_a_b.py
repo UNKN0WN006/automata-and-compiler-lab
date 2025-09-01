@@ -20,38 +20,18 @@ class Tree:
     def save(self, name):
         self.g.render(name, view=False, format='png')
 
-def check(s, cur, t, par=None):
-    print("Now:", cur)
-    if cur == s:
-        return True
-    # Only compare the number of terminals (ignore S)
-    if len(cur.replace('S', '')) > len(s):
-        return False
-    i = cur.find('S')
-    if i == -1:
-        return False
-    # S -> aSb
-    ns = cur[:i] + 'aSb' + cur[i+1:]
-    na = t.node('aSb')
-    if par: t.edge(par, na)
-    if check(s, ns, t, na): return True
-    # S -> bSa
-    ns = cur[:i] + 'bSa' + cur[i+1:]
-    nb = t.node('bSa')
-    if par: t.edge(par, nb)
-    if check(s, ns, t, nb): return True
-    # S -> ε
-    ns = cur[:i] + '' + cur[i+1:]
-    ne = t.node('ε')
-    if par: t.edge(par, ne)
-    if check(s, ns, t, ne): return True
-    return False
+def check(s, t):
+    na = s.count('a')
+    nb = s.count('b')
+    root = t.node(s)
+    info = t.node(f"a={na}, b={nb}")
+    t.edge(root, info)
+    return na == nb
 
 if __name__ == "__main__":
     s = input("Enter string: ")
     t = Tree()
-    r = t.node('S')
-    if check(s, 'S', t, r):
+    if check(s, t):
         print("Accepted")
         t.save("tree_eq_ab")
         print("Parse tree saved as tree_eq_ab.png")
