@@ -10,4 +10,12 @@ digraph {
 	n2 -> n4
 	n5 [label="ε"]
 	n2 -> n5
+	n6 [label=bSa]
+	n1 -> n6
+	n7 [label=aSb]
+	n6 -> n7
+	n8 [label=bSa]
+	n6 -> n8
+	n9 [label="ε"]
+	n6 -> n9
 }
