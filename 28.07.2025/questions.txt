@@ -1,0 +1,7 @@
+Questions:
+
+Do some basic problems of automata :
+
+1. Strings should be aba. Do its complement too.
+2. String should contain even no. of 1s. Do its complement too.
+3. String must be a multiple of 2. Do its complement too.
