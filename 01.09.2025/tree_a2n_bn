@@ -6,6 +6,8 @@ digraph {
 	n1 -> n2
 	n3 [label=aaSb]
 	n2 -> n3
-	n4 [label="ε"]
-	n2 -> n4
+	n4 [label=aaSb]
+	n3 -> n4
+	n5 [label="ε"]
+	n3 -> n5
 }

@@ -8,12 +8,6 @@ digraph {
 	n2 -> n3
 	n4 [label=aSb]
 	n3 -> n4
-	n5 [label=aSb]
-	n4 -> n5
-	n6 [label=aSb]
-	n5 -> n6
-	n7 [label=aSb]
-	n6 -> n7
-	n8 [label="ε"]
-	n6 -> n8
+	n5 [label="ε"]
+	n3 -> n5
 }

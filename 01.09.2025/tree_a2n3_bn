@@ -8,8 +8,12 @@ digraph {
 	n2 -> n3
 	n4 [label=aaSb]
 	n3 -> n4
-	n5 [label=aaa]
-	n3 -> n5
-	n6 [label=aaa]
-	n2 -> n6
+	n5 [label=aaSb]
+	n4 -> n5
+	n6 [label=aaSb]
+	n5 -> n6
+	n7 [label=aaa]
+	n5 -> n7
+	n8 [label=aaa]
+	n4 -> n8
 }
