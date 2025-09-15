@@ -1,0 +1,7 @@
+Questions:
+
+1.  Input any c program and count the number of tokens where no whitespaces be counted and other than that, draw the symbol table too as well as find the lexical errors too in the program.
+
+Syntax of the symbol table:
+__________________________________________________________________
+|Identifier|Separator|Keyword|Operator|Constant|Special Character|
