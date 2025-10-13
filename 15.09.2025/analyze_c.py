@@ -29,6 +29,7 @@ lexical_errors = []
 token_count = 0
 
 def analyze_c_file(filename):
+    global token_count
     with open(filename, 'r') as f:
         code = f.read()
 
